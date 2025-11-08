@@ -73,10 +73,7 @@ question("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle
 	answer("1", correct = TRUE)
 )
 ```
-<button onclick="window.location.href='exercise1.Rmd'">
-  ← Zurück zu Aufgabe 1
-</button>
-
+                 
 ```{r exercise2_b, echo=FALSE}
 question("(b) Geben Sie für das Ereignis A: „es ist genau zweimal
 	Wappen gefallen“ die Ereignismenge an.",
@@ -147,4 +144,18 @@ question("(d) Bestimmen Sie A $\\cup$ B",
 	answer(2,
 	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
 )
+```
+
+
+# Aufgabe 4 {#aufgabe4}
+
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		"Geben Sie die Potenzmenge zu folgenden Mengen an. 
+		Bestimmen Sie vorher die Anzahl der Elemente in der
+		Potenzmenge."
+	)
+
 ```
