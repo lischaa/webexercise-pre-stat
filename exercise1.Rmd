@@ -10,7 +10,6 @@ library(VennDiagram)
 library(grid)
 ```
 
-
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
 	wellPanel(
@@ -27,9 +26,6 @@ library(grid)
 	)
 ```
 
-
-
-
 ```{r exercise1_a, echo=FALSE}
 question("(a) Welche Elemente gehören zur symmetrischen Differenz A Δ B ?",
 	answer("23"),
@@ -39,22 +35,20 @@ question("(a) Welche Elemente gehören zur symmetrischen Differenz A Δ B ?",
 
 ```{r exercise1_b, echo=FALSE}
 question("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken 
-	als A Δ B = (A\\B) ∪ (B\\A)",
+	als A $\\Delta$ B = (A\\B) $\\cup$ (B\\A)",
 	answer("23"),
 	answer("1", correct = TRUE)
 )
 ```
 
 ```{r exercise1_c, echo=FALSE}
-question("(c) A Δ B = B heißt dasselbe wie B ⊂ A",
+question("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A",
 	answer("23"),
 	answer("3", correct = TRUE)
 )
 ```
 
-
 # Aufgabe 2 {#aufgabe2}
-
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -64,42 +58,75 @@ question("(c) A Δ B = B heißt dasselbe wie B ⊂ A",
 	)
 ```
 
-
 ```{r exercise2_a, echo=FALSE}
-question("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle
-	möglichen Ergebnisse liegen. Wie viel Elemente
-	enthält die Menge $\\Omega$?",
-	answer("23"),
-	answer("1", correct = TRUE)
+question("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
+	answer("$\\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
+	(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}", correct = TRUE),
+	answer("Ω = {W, Z}")
 )
 ```
-                 
+
+<details> <summary><strong>Lösung für Menge $\Omega$ anzeigen</strong></summary>
+Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
+die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
+
+$\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
+(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}
+
+</details> 
+
 ```{r exercise2_b, echo=FALSE}
-question("(b) Geben Sie für das Ereignis A: „es ist genau zweimal
-	Wappen gefallen“ die Ereignismenge an.",
-	answer("23"),
-	answer("1", correct = TRUE)
-)
+question("(b) Wie viel Elemente
+	enthält die Menge $\\Omega$? Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
+	answer("8"),
+	answer("6"),
+	answer("16", correct = TRUE))
 ```
+<details> <summary><strong>Lösung für Anzahl der Elemente von $\Omega$ anzeigen</strong></summary>
+Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
+zwei mögliche Ergebnisse gibt.
+</details> 
 
 ```{r exercise2_c, echo=FALSE}
-question("(c) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
-	answer("23"),
-	answer("333", correct = TRUE)
+question("(c) Geben Sie für das Ereignis A: „es ist genau zweimal
+	Wappen gefallen“ die Ereignismenge an.",
+	answer("A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
+		W), (Z, Z, W, W)}", correct = TRUE),
+	answer("A = {(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)}")
 )
 ```
+<details> <summary><strong>Lösung für Ereignismenge anzeigen</strong></summary>
+Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
+sich durch A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
+W), (Z, Z, W, W)} beschreiben.
+</details> 
 
 ```{r exercise2_d, echo=FALSE}
-question("(d) Bestimmen Sie A $\\cup$ B",
-	answer("23"),
-	answer("3", correct = TRUE)
+question("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
+	answer("B = { (W, W, W, W), (W, W, Z, Z) }"),
+	answer("B = \\{(W, W, $x_{3}$, $x_{4}$) | $x_{3}$, $x_{4}$ $\\in$ {W, Z\\}\\} = {(W, W, W, W),(W, W, W, Z),(W, W, Z, W),(W, W, Z, Z)}", correct = TRUE)
+
 )
 ```
+<details> 
+	<summary><strong>Lösung für Ereignismenge anzeigen</strong></summary>
+	Die Menge der Ergebnisse, bei denen die ersten beiden Würfe Wappen zeigen
+	kann durch B = {(W, W, $x_{3}$, $x_{4}$) | $x_{3}$, $x_{4}$ $\in$ {W, Z}} = {(W, W, W, W), (W, W, W, Z),
+	(W, W, Z, W), (W, W, Z, Z)} beschrieben werden.
+</details> 
 
-
+```{r exercise2_e, echo=FALSE}
+question("(e) Bestimmen Sie A $\\cap$ B",
+	answer("A $\\cap$ B = { (W, W, W, Z), (W, W, Z, W) }"),
+	answer("A $\\cap$ B = {(W, W, Z, Z)}", correct = TRUE)
+)
+```
+<details> <summary><strong>Lösung für A $\cap$ B</strong></summary>
+Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
+A $\cap$ B = {(W, W, Z, Z)}.
+</details> 
 
 # Augabe 3 {#aufgabe3}
-
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -120,6 +147,7 @@ question("(d) Bestimmen Sie A $\\cup$ B",
 	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
 )
 ```
+
 ```{r exercise3_2, echo=FALSE}
 	question_numeric(
 	"(b) B = {a, b, c}",
@@ -135,20 +163,14 @@ question("(d) Bestimmen Sie A $\\cup$ B",
 
 ```{r exercise3_3, echo=FALSE}
 	question_numeric(
-	"(c) C = A ∪ B ∪ {1, . . . , 11}",
+	"(c) C = A $\\cup$ B $\\cup$ {1, . . . , 11}",
 	# Die korrekte Antwort
-	answer(11,
-		correct = TRUE),
-	answer(4,
-		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
-	answer(2,
-	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
-)
+	answer(14,
+		correct = TRUE)
+	)
 ```
 
-
 # Aufgabe 4 {#aufgabe4}
-
 
 ```{r, echo=FALSE, results='asis'}
 	library(shiny)
@@ -159,15 +181,27 @@ question("(d) Bestimmen Sie A $\\cup$ B",
 	)
 
 ```
-```{r exercise1_1, echo=FALSE}
+
+```{r exercise4_1, echo=FALSE}
 	question_numeric(
-	"...",
+	"a) Anzahl der Elemente für A = {{1, 2} , {3, 4}}",
 	# Die korrekte Antwort
-	answer(11,
-		correct = TRUE),
 	answer(4,
-		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
+		correct = TRUE),
 	answer(2,
+		message = "Leider falsch. Die gesuchte Zahl ist zu hoch."),
+	answer(5,
 	message = "Leider falsch. Die gesuchte Zahl ist zu niedrig.")
+	)
+```
+
+```{r exercise4_2, echo=FALSE}
+	question_numeric(
+	"(b) Anzahl der Elemente für B = {1, 2, 3, 4}}",
+	# Die korrekte Antwort
+	answer(1),
+	answer(16,
+		correct = TRUE),
+	answer(4)
 	)
 ```
