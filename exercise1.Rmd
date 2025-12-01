@@ -5,9 +5,6 @@ output:
     progressive: true
     allow_skip: true
 runtime: shiny_prerendered
-description: >
-  Learn how to set up R and RStudio on your machine. We will also demonstrate
-  how to install R packages from CRAN, and install the tidyverse package.
 ---
 
 ```{r setup, include=FALSE}
@@ -31,14 +28,14 @@ library(grid)
 	)
 ```
 
-```{r exercise1_a, echo=FALSE}
+```{r exercise1_1_a, echo=FALSE}
 question("(a) Welche Elemente gehören zur symmetrischen Differenz A Δ B ?",
 	answer("23"),
 	answer("1", correct = TRUE)
 )
 ```
 
-```{r exercise1_b, echo=FALSE}
+```{r exercise1_1_b, echo=FALSE}
 question("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken 
 	als A $\\Delta$ B = (A\\B) $\\cup$ (B\\A)",
 	answer("23"),
@@ -46,7 +43,7 @@ question("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken
 )
 ```
 
-```{r exercise1_c, echo=FALSE}
+```{r exercise1_1_c, echo=FALSE}
 question("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A",
 	answer("23"),
 	answer("3", correct = TRUE)
@@ -63,15 +60,16 @@ question("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A",
 	)
 ```
 
-```{r exercise2_a, echo=FALSE}
+```{r exercise1_2_a, echo=FALSE}
 question("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
-	answer("$\\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
-	(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}", correct = TRUE),
+	answer("$\\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\\in$ {W, Z}, \\
+	i = 1, …,4} = {(W, W, W, W), (W, W, W, Z), (W, W, Z, W), 
+	(W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}", correct = TRUE),
 	answer("Ω = {W, Z}")
 )
 ```
 
-<details> <summary><strong>Lösung für Menge $\Omega$ anzeigen</strong></summary>
+<details> <summary><strong>Lösung für Menge $\Omega$ anzeigen</strong><br><br></summary>
 Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
 die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
 
@@ -80,19 +78,19 @@ $\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4
 
 </details> 
 
-```{r exercise2_b, echo=FALSE}
+```{r exercise1_2_b, echo=FALSE}
 question("(b) Wie viel Elemente
 	enthält die Menge $\\Omega$? Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
 	answer("8"),
 	answer("6"),
 	answer("16", correct = TRUE))
 ```
-<details> <summary><strong>Lösung für Anzahl der Elemente von $\Omega$ anzeigen</strong></summary>
+<details> <summary><strong>Lösung für Anzahl der Elemente von $\Omega$ anzeigen</strong><br><br></summary>
 Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
 zwei mögliche Ergebnisse gibt.
 </details> 
 
-```{r exercise2_c, echo=FALSE}
+```{r exercise1_2_c, echo=FALSE}
 question("(c) Geben Sie für das Ereignis A: „es ist genau zweimal
 	Wappen gefallen“ die Ereignismenge an.",
 	answer("A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
@@ -100,33 +98,34 @@ question("(c) Geben Sie für das Ereignis A: „es ist genau zweimal
 	answer("A = {(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)}")
 )
 ```
-<details> <summary><strong>Lösung für Ereignismenge anzeigen</strong></summary>
+<details> <summary><strong>Lösung für Ereignismenge anzeigen</strong><br><br></summary>
 Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
 sich durch A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
 W), (Z, Z, W, W)} beschreiben.
 </details> 
 
-```{r exercise2_d, echo=FALSE}
+```{r exercise1_2_d, echo=FALSE}
 question("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
 	answer("B = { (W, W, W, W), (W, W, Z, Z) }"),
-	answer("B = \\{(W, W, $x_{3}$, $x_{4}$) | $x_{3}$, $x_{4}$ $\\in$ {W, Z\\}\\} = {(W, W, W, W),(W, W, W, Z),(W, W, Z, W),(W, W, Z, Z)}", correct = TRUE)
+	answer("B = \\{(W, W, $x_{3}$, $x_{4}$) | $x_{3}$,
+	$x_{4}$ $\\in$ {W, Z\\}\\} = {(W, W, W, W),(W, W, W, Z),(W, W, Z, W),(W, W, Z, Z)}", correct = TRUE)
 
 )
 ```
 <details> 
-	<summary><strong>Lösung für Ereignismenge anzeigen</strong></summary>
+	<summary><strong>Lösung für Ereignismenge anzeigen</strong><br><br></summary>
 	Die Menge der Ergebnisse, bei denen die ersten beiden Würfe Wappen zeigen
 	kann durch B = {(W, W, $x_{3}$, $x_{4}$) | $x_{3}$, $x_{4}$ $\in$ {W, Z}} = {(W, W, W, W), (W, W, W, Z),
 	(W, W, Z, W), (W, W, Z, Z)} beschrieben werden.
 </details> 
 
-```{r exercise2_e, echo=FALSE}
+```{r exercise1_2_e, echo=FALSE}
 question("(e) Bestimmen Sie A $\\cap$ B",
 	answer("A $\\cap$ B = { (W, W, W, Z), (W, W, Z, W) }"),
 	answer("A $\\cap$ B = {(W, W, Z, Z)}", correct = TRUE)
 )
 ```
-<details> <summary><strong>Lösung für A $\cap$ B</strong></summary>
+<details> <summary><strong>Lösung für A $\cap$ B</strong><br><br></summary>
 Die Schnittmenge zwischen beiden Ereignissen enthält nur ein Ergebnis
 A $\cap$ B = {(W, W, Z, Z)}.
 </details> 
@@ -140,10 +139,10 @@ A $\cap$ B = {(W, W, Z, Z)}.
 	)
 ```
 
-```{r exercise3_1, echo=FALSE}
+```{r exercise1_3_1, echo=FALSE}
 	question_numeric(
 	"(a) A = {1, 2, 3}",
-	# Die korrekte Antwort
+
 	answer(3,
 		correct = TRUE),
 	answer(4,
@@ -153,10 +152,9 @@ A $\cap$ B = {(W, W, Z, Z)}.
 )
 ```
 
-```{r exercise3_2, echo=FALSE}
+```{r exercise1_3_2, echo=FALSE}
 	question_numeric(
 	"(b) B = {a, b, c}",
-	# Die korrekte Antwort
 	answer(3,
 		correct = TRUE),
 	answer(4,
@@ -166,10 +164,9 @@ A $\cap$ B = {(W, W, Z, Z)}.
 )
 ```
 
-```{r exercise3_3, echo=FALSE}
+```{r exercise1_3_3, echo=FALSE}
 	question_numeric(
 	"(c) C = A $\\cup$ B $\\cup$ {1, . . . , 11}",
-	# Die korrekte Antwort
 	answer(14,
 		correct = TRUE)
 	)
@@ -187,7 +184,7 @@ A $\cap$ B = {(W, W, Z, Z)}.
 
 ```
 
-```{r exercise4_1, echo=FALSE}
+```{r exercise1_4_1, echo=FALSE}
 	question_numeric(
 	"a) Anzahl der Elemente für A = {{1, 2} , {3, 4}}",
 	# Die korrekte Antwort
@@ -200,7 +197,7 @@ A $\cap$ B = {(W, W, Z, Z)}.
 	)
 ```
 
-```{r exercise4_2, echo=FALSE}
+```{r exercise1_4_2, echo=FALSE}
 	question_numeric(
 	"(b) Anzahl der Elemente für B = {1, 2, 3, 4}}",
 	# Die korrekte Antwort
@@ -210,3 +207,427 @@ A $\cap$ B = {(W, W, Z, Z)}.
 	answer(4)
 	)
 ```
+
+## Aufgabe 5
+
+```{r, echo=FALSE, results='asis'}
+	library(shiny)
+	wellPanel(
+		"Lösen Sie folgende Gleichungen:"
+	)
+```
+```{r, exercise1_5_1, echo=FALSE, results='asis'}
+	question("(a) $x^{2}$ = 18",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+```
+<details> <summary><strong>Lösung für $x^{2}$</strong><br><br></summary>
+$x = log_{2}18 ≈ 4.17$
+</details> 
+
+```{r, exercise1_5_2, echo=FALSE, results='asis'}
+	question("(b) $e^{x}$ = 1",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+```
+<details> <summary><strong>Lösung für $e^{x}$ = 1</strong><br><br></summary>
+x = ln(1) = 0
+</details> 
+
+```{r, exercise1_5_3, echo=FALSE, results='asis'}
+	question("(c)  $e^{x}$ = 27", 
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+```
+<details> <summary><strong>Lösung für $e^{x}$ = 27</strong><br><br></summary>
+x = ln(27) ≈ 3.3
+</details> 
+
+```{r, exercise1_5_4, echo=FALSE, results='asis'}
+	question("(d) $log_{10}$(2) + $log_{10}$(5) =",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+```
+<details> 
+<summary><strong>Lösung für $log_{10}$(2) + $log_{10}$(5) =</strong><br><br></summary>
+
+$log_{10}(2) + log_{10}(5) = log_{10}(2 · 5) = log_{10}10 = 1$
+</details> 
+
+
+```{r, exercise1_5_5, echo=FALSE}
+	question("(e) $log_{2}$(4) =",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+
+```
+<details> <summary><strong>Lösung für $log_{2}$(4) =</strong><br><br></summary>
+$log_{2}(4) = log_{2}(2) + log_{2}(2) = 2$ oder $log_{2}$($2^{2}$) = 2 · $log_{2}(2) = 2$
+</details> 
+
+
+## Block 2 
+
+### Übungen 2 – A1
+
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+wellPanel(
+	HTML("Zeichnen Sie die folgenden Geraden in ein Koordinatensystem mit 
+	x &isin; [-5, 5] und y &isin; [-5, 5] ein. Geben Sie die Geraden jeweils in der Form y = mx + b an.")
+)
+```
+```{r, exercise2_2_1, echo=FALSE}
+quiz(caption = "",
+	question("(a) die Gerade y = 2x- 1",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(b) die Gerade, die durch die Punkte (1, -3) und (-2,4) geht",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(c) die Gerade durch den Punkt (1,1) und mit der Steigung m = -0.5",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(d) die Gerade y = 2x- 1",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+)
+```
+
+<details> <summary><strong>Ü2 – Lösung Aufgabe 1</strong><br><br></summary>
+
+</details> 
+
+### Übungen 2 – A2
+
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+wellPanel(
+	HTML("Das Wachstum einer Population sei durch die Funktion
+	\\( u(t) = u_{0} \\cdot e^{\\alpha t} \\), \\(\\alpha > 0\\)
+	(exponentielles Wachstum) beschrieben (\\(u_{0}\\) = Anfangspopulation, also t = 0).")
+)
+```
+
+```{r, exercise2_2_2, echo=FALSE}
+quiz(caption = "",
+	question("(a) Wie groß ist die Zeitspanne 
+	$\\delta$, innerhalb derer sich u(t) verdoppelt hat?",
+	answer("$\\frac{1}{\\alpha}$"),
+	answer("ln2/ $\\alpha$", correct = TRUE),
+	answer("$\\alpha$ $\\cdot$ ln2")
+	),
+	question("(b) Verdoppeln sich kleine oder große Populationen schneller?",
+	answer("Kleine Populationen verdoppeln sich schneller."),
+	answer("Große Populationen verdoppeln sich schneller."),
+	answer("Die Verdoppelungszeit ist nicht von der Anfangspopulation $u_{0}$ abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich schnell.", correct = TRUE)
+	)
+)
+```
+
+
+
+<details> <summary><strong>Ü2 – Lösung Aufgabe 2</strong><br><br></summary>
+(a) Für die Verdoppelungszeit \(\delta muss gelten u(\delta) = 2 \cdot u(0)\). Eingesetzt in die
+Funktionsgleichung ergibt sich
+
+	\(u(\delta) = u_{0} \cdot e^{\alpha \cdot \delta} = 2 \cdot u_{0} \) <br>
+	\( \Leftrightarrow e^{\alpha \cdot \delta} = 2 \) <br>
+	\(\Leftrightarrow \alpha \cdot \delta = ln2 \) <br>
+	\(\Leftrightarrow \delta = \frac{ln2}{\alpha}\) <br>
+
+	Damit verdoppelt sich die Anfangspopulation in einer Zeitspanne \(ln2/ \alpha \). <br><br>
+
+(b) Die Verdoppelungszeit ist nicht von der Anfangspopulation \(u_{0}\)
+abhängig, d.h. große oder kleine Populationen verdoppeln sich gleich
+schnell.
+</details> 
+
+### Übungen 2 – A3
+
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+wellPanel(
+	HTML("Die Einwohnerzahl von Mexiko-City betrug 5.5 Millionen im Jahre 1960
+	und stieg bis 1975 auf 8.1 Millionen an. <br> 
+	Unter Annahme eines exponentiellen Wachstums soll die Entwicklung der Einwohnerzahl y beschrieben werden.")
+)
+```
+
+```{r, exercise2_2_3, echo=FALSE}
+quiz(caption = "",
+	question("(a)Wohin legen Sie den Nullpunkt, um wenig Arbeit mit dem
+	rechnen zu haben?",
+	answer("Der Nullpunkt sollte in das Jahr 19675 gelegt werden."),
+	answer("Der Nullpunkt sollte in das Jahr 1960 gelegt werden.", correct = TRUE)
+	),
+	question("(b) Geben Sie y(0) und y(15) an.",
+	answer("$\\gamma(0) = 3$, $\\gamma(15) = 23$"),
+	answer("$\\gamma(0) = 5.5$, $\\gamma(15) = 8.1$", correct = TRUE),
+	answer("$\\gamma(0) = 8.1$, $\\gamma(15) = 5.5$")
+	),
+	question("(c) Bestimmen Sie nun $y_{0}$ und $\\lambda$ so, dass $\\gamma = \\gamma_0 \\cdot e^{\\lambda t}$ korrekt für die angegebenen Werte ist.",
+	answer("$\\gamma_{0} = 5.5$, $\\lambda = 0.002$"),
+	answer("$\\gamma_{0} = 8.1$, $\\lambda = 0.12$"),
+	answer("$\\gamma_{0} = 0.0258$, $\\lambda = 5.5$", correct = TRUE)
+	)
+)
+```
+
+<details> <summary><strong>Ü2 – Lösung Aufgabe 3</strong><br><br></summary>
+(a) Der Nullpunkt sollte in das Jahr 1960 gelegt werden.
+
+(b) Mit dem Nullpunkt aus Teilaufgabe (a) erhält man y(0) = 5.5 und y(15) = 8.1
+
+(c) Mit den Angaben aus Teilaufgabe (b) und dem Wachstumsmodell \(\gamma = \gamma_0 \cdot e^{\lambda t}\) erhält man:
+
+	\(\gamma(0) = 5.5 = \gamma_0 \cdot e^{\lambda 0} \Rightarrow \gamma_0 = 5.5\) <br> <br>
+	\(\gamma(15) = 8.1 = 5.5 \cdot e^{\lambda \cdot 15} \Leftrightarrow e^{\lambda \cdot 15} = \frac{8.1}{5.5} \Leftrightarrow \lambda = \frac{1}{15} \cdot ln(\frac{8.1}{5.5}) = 0.0258\)
+
+	Wichtig zu merken: \(e^0 = 1\)
+</details> 
+
+## Block 3
+
+### Übungen 3 – A1
+
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+	wellPanel(
+	HTML("Bestimmen Sie die Ableitung zu")
+  )
+```
+
+```{r, exercise3_1_1, echo=FALSE}
+quiz(caption = "",
+	question("(a) ${f}$ = 3 $x^{4}$ + $x^{2}$ + 5",
+	answer("$f'(x)$ = $12x^{3}$ + x"),
+	answer("$f'(x)$ = $12x^{3}$ + 2x", correct = TRUE),
+	answer("$f'(x)$ = $3x^{3}$ + 2x")
+	),
+	question("(b) ${f}$ = $e^{3x}$",
+	answer("$f'(x)$ = $2e^{3x}$"),
+	answer("$f'(x)$ = $e^{3x}$/3"),
+	answer("$f'(x)$ = $3e^{3x}$", correct = TRUE)
+	),
+	question("(c) ${f}$ = 2x + $e^{3x}$ + x",
+	answer("$f'(x)$ = $3e^{3x}$ + 3", correct = TRUE),
+	answer("$f'(x)$ = $e^{3x}$ + 2 + 1"),
+	answer("$f'(x)$ = $e^{3x}$ + 3")
+	),
+	question("(d) ${f}$ = $\\sqrt{1 - x^{2}}$",
+	answer("$f'(x)$  = 2 $\\cdot$ (1 - $x^{2}$ $)^{-\\frac{1}{2}}$ $\\cdot$ ($-2x$)"),
+	answer("$f'(x)$ = 1 - 2x"),
+	answer("$f'(x)$  = 1/2 $\\cdot$ (1 - $x^{2}$ $)^{-\\frac{1}{2}}$ $\\cdot$ ($-2x$)", correct = TRUE)
+	),
+	question("(e) ${f}$ = $e^{x}$ $\\cdot$ ln(x)",
+	answer("$f'(x)$  = $e^{x}$ ($\\frac{1}{x}$ + ln(x))"),
+	answer("$f'(x)$  = $e^{x}$ $\\cdot$ $\\frac{1}{x}$ + $e^{x}$ $\\cdot$ ln(x)", correct = TRUE),
+	answer("$f'(x)$ = $e^{x}$ $\\cdot$ ln(x)")
+	),
+	question("(f) ${f}$ =  $\\frac{x+4}{x^{2}}$",
+	answer("$f'(x)$ = (x + 4) $\\cdot$ ($-2$) $\\cdot$ $\\frac{1}{x^{3}}$ + 1 $\\cdot$ $\\frac{1}{x^{2}}$", correct = TRUE),
+	answer("$f'(x)$ = (x + 4) $\\cdot$ $\\frac{1}{x^{3}}$ + 1 $\\cdot$ $\\frac{1}{x^{2}}$"),
+	answer("$f'(x)$ = $\\frac{1}{x^{2}}$ + 1 $\\cdot$ $\\frac{1}{x^{3}}$")
+	),
+	question("(g) ${f}$ = (x + 4) $\\cdot$ $e^{x}$",
+	answer("$f'(x)$ = (x + 4) $\\cdot$ $e^{x}$"),
+	answer("$f'(x)$ = 1 + $e^{x}$"),
+	answer("$f'(x)$ = (x + 4) $\\cdot$ $e^{x}$ + 1 $\\cdot$ $e^{x}$", correct = TRUE)
+	),
+	question("(h) ${f}$ = ln(x - 4) + 2",
+	answer("$f'(x)$ = 1/(x - 4)", correct = TRUE),
+	answer("$f'(x)$ = x - 4"),
+	answer("$f'(x)$ = $\\frac{1}{x^{x}}$ + 2")
+	),
+	question("(i) ${f}$ = $e^{-2x}$",
+	answer("$f'(x)$ = $e^{-2x}$"),
+	answer("$f'(x)$ = $-2e^{-2x}$", correct = TRUE),
+	answer("$f'(x)$ = $2e^{-2x}$")
+	),
+	question("(j) ${f}$ = $e^{\\ -2x^{2}}$",
+	answer("$f'(x)$ = $-2x$ $\\cdot$ $e^{-2x^{2}}$"),
+	answer("$f'(x)$ = $e^{-2x^{2}}$"),
+	answer("$f'(x)$ = $-4x$ $\\cdot$ $e^{-2x^{2}}$", correct = TRUE)
+	)
+)
+```
+
+<details> <summary><strong>Ü3 – Lösung Aufgabe 1</strong><br><br></summary>
+(a) \(f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x \) <br><br>
+(b) \(f(x) = e^{3x} \Rightarrow f'(x) = 3e^{3x} \) <br><br>
+(c) \(f(x) = 2x + e^{3x} + x \Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3\) <br><br>
+(d) \(f(x) = \sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \Rightarrow f'(x) = 1/2 \cdot (1 - x^{2})^{- \frac{1}{2}} \cdot (-2x)\) <br><br>
+(e) \(f(x) = e^{x} \cdot ln(x) \Rightarrow f'(x) = e^{x} \cdot \frac{1}{x} + e^{x} \cdot ln(x)\) <br><br>
+(f) \(f(x) = \frac{(x + 4)}{x^{2}} = (x + 4) \cdot \frac{1}{x^{2}} \Rightarrow f'(x) = (x + 4) \cdot (-2) \cdot \frac{1}{x^{3}} + 1 \cdot \frac{1}{x^{2}}\) <br><br>
+(g) \(f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}\) <br><br>
+(h) \(f(x) = ln(x - 4) + 2 \Rightarrow f'(x) = 1/(x - 4)\) <br><br>
+(i) \(f(x) = e^{-2x} \Rightarrow f'(x) = -2e^{-2x}\) <br><br>
+(j) \(f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}\) <br><br>
+</details> 
+
+### Übungen 3 – A2
+
+```{r, exercise3_2_1, echo=FALSE}
+	question( "Gegeben ist die Funktion ${f}$(x) = 8 $x^{3}$ + 3 $x^{2}$ – 3x. 
+	Bestimmen Sie die globalen und lokalen Extremstellen der Funktion im Intervall [-1,1].
+	Skizzieren Sie die Funktion zunächst auf dem Intervall [-1,1]. 
+	Verwenden Sie folgende Regel: Nullstellen einer quadratischen Funktion ${f}$(x) = a  $x^{2}$ + bx + c gegeben
+	durch:",
+	answer("$f(-1) = -2$, $f(-0.5) = 1.25$, $f(0.25) = -0.4375$, $f(1) = 8$", correct = TRUE),
+	answer("$f(−0.5) = 1.25$, $f(0.25) = −0.4375$, $f(1) = 8$, $f(−1) = -2$"),
+	answer("$f(0) = 0$, $f(0.5) = 2.625$, $f(−0.25) = -0.4375$, $f(0.25) = 0.4375$")
+	) 
+```
+
+<details> <summary><strong>Ü3 – Lösung Aufgabe 1</strong><br><br></summary>
+Zunächst muss die Ableitung gebildet werden.<br>
+Es ist \(f'(x) = 24x^{2} + 2 6x -3\) <br>
+
+Davon müssen nun die Nullstellen bestimmt werden: <br><br>
+\(0 = 24x^{2} + 6x - 3 \Leftrightarrow 0 = 8x^{2} + 2x -1\) <br><br>
+\(\Leftrightarrow x_{1,2} = \frac{-2 \pm \sqrt{4 - 4 \cdot 8 \cdot (-1)}}{16} = \frac{-2 \pm \sqrt{36}}{16} \Rightarrow x_{1} = - 0.5,x_{2} = 0.25\)
+
+Eine Auswertung der Funktion an den möglichen Extremstellen, sowie am
+Rand des Intervalls ergibt: <br>
+\(f(-1) = -2, f(-0.5) = 1.25, f(0.25) = -0.4375, f(1) = 8\) <br><br>
+Daraus lässt sich ablesen, dass die absoluten Extremwerte am Rand
+liegen. Da ein Polynom vom Grad 3 entweder zwei Extremwerte oder eine
+Wendestelle besitzt, sind die inneren Punkte auch lokale Extremwerte.
+</details> 
+
+## Block 4
+
+### Übungen 4 – A1
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+	wellPanel(
+	HTML("Berechnen Sie die folgenden Integrale")
+  )
+```
+```{r, exercise4_1_1, echo=FALSE}
+quiz(caption = "",
+	question("(a) $\\int_{0}^{2}$($x^{3}$ + 2x)dx",
+	answer("6"),
+	answer("8", correct = TRUE),
+	answer("12")
+	),
+	question("(b) $\\int_{-2}^{2}$ $e^{2x}$ dx",
+	answer("27.29", correct = TRUE),
+	answer("$e^{4}$ - 1"),
+	answer("23")
+	),
+	question("(c) $\\int_{0}^{2}$(x + 4 $)^{2}$ dx",
+	answer("$\\frac{152}{3}$"),
+	answer("50"),
+	answer("50 $\\frac{2}{3}$", correct = TRUE)
+	),
+	question("(d) $\\int_{}^{}$ 4x dx",
+	answer("4 $x^{2}$ + c"),
+	answer("2x + c"),
+	answer("2 $x^{2}$ + c", correct = TRUE)
+	)
+)
+```
+
+
+<details> <summary><strong>Ü4 – Lösung – Aufgabe 1</strong><br><br></summary>
+(a) \(\int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8\) <br><br>
+(b) \(\int_{2}^{-2} e^{2x}dx + \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29 \) <br> <br>
+(c) \(\int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}\) <br> <br>
+	\((\frac{8}{3} + 16 + 32) - 0 = 50\frac{2}{3}\) <br> <br>
+(d) \(\int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c\)
+</details> 
+
+### Übungen 4 – A2
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+	wellPanel(
+	HTML("Berechnen Sie die die Fläche unterhalb der Funktion im
+	angegebenen Intervall. Skizzieren Sie die Funktion.")
+  )
+```
+
+```{r, exercise4_1_3, echo=FALSE}
+quiz(caption = "",
+	question("(a) $f$(x) = -2x, Fläche im Intervall [-2,2]",
+	answer("4"),
+	answer("0"),
+	answer("8", correct = TRUE)
+	),
+	question("(b) $f(x)$ = \\begin{cases} 0 & \\text{für} & x<0 \\\\\\ 
+				-x^{2} + \\frac{4}{3} & \\text{für} & 0 \\le x\\le 1 & \\text{im Intervall} & [0,2] \\\\\\ 
+				0 & \\text{für} & x>1 \\end{cases}",
+	answer("$\\frac{1}{3}$"),
+	answer("1", correct = TRUE),
+	answer("$\\frac{4}{3}$")
+	)
+)
+```
+
+<details> <summary><strong>Ü4 – Lösung – Aufgabe 2</strong><br><br></summary>
+(a) \(f(x) = -2x\), Fläche im Intervall [-2,2] <br>
+	Nullstelle: x = 0 <br>
+	Stammfunktion: \(F(x) = -x^{2} + c\) <br><br>
+	Fläche <br>
+
+	\(\int_{2}^{-2} -2x dx + \int_{2}{0} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)| = 4 + 4 = 8 \) <br><br>
+
+(b) \(f(x) = \begin{cases} 0 & \text{für} x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} x > 1\end{cases}\)
+
+	Stammfunktion: \(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c\) <br><br>
+	Fäche: \(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1\)
+</details> 
+
+## Abschlussübung
+
+```{r, echo=FALSE, results='asis'}
+library(shiny)
+	wellPanel(
+	HTML("Betrachten Sie die Funktion \\(f(x) = (x - 1 )^{2} \\cdot x \\) im Intervall [-1, 3].")
+  )
+```
+```{r, final, echo=FALSE}
+quiz(caption = "",
+	question("(a) Skizzieren Sie die Funktion auf dem Intervall [-1,3]",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(b) Bestimmen Sie die Nullstellen der Funktion $f$ (x)",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(c) Bestimmen Sie die Tangente im Punkt $x_{0}$ = 2 und zeichnen
+	Sie die Tangente ein",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(d) Bestimmen Sie die Extremstellen im Intervall [-1,3]",
+	answer("23"),
+	answer("3", correct = TRUE)
+	),
+	question("(e) Berechnen Sie die Fläche unter der Kurve im Intervall [-1,1]",
+	answer("23"),
+	answer("3", correct = TRUE)
+	)
+)
+```
+<details> <summary><strong>Lösung zur Aufgabe</strong><br><br></summary>
+(a) \(f(x) = (x - 1)^{2} \cdot x\) im inertvall [-1, 3] <br>
+	\(f(x) = (x^{2} - 2x + 1) \cdot x = x^{3} - 2x^{2} + x\) <br>
+	\(f'(x) = 3x^{2} - 4x + 1\)
+
+- Nullstellen \(f(x) = 0 \Rightarrow x_{1} = 1, x_{2} = 0\) <br> (ein Produkt ist 0, wenn einer der Faktoren 0 ist)
+- Tangente im Punkt \(x_{0} = 2\): <br>
+	\(t(x) = f(2) + f'(x)(x - 2) = 2 +5(x -2)\) <br>
+	\(\Leftrightarrow t(x) = 5x - 8\)
+</details> 
