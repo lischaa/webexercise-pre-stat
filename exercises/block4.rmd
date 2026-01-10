@@ -1,0 +1,49 @@
+---
+title: Block 4
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Exercises
+
+### Übungen 4 – A1
+
+::: {.callout-tip collapse="true"}
+$\\ \int_{2}^{0} (x^{3} + 2x)dx = \frac{1}{4}x^{4} + x^{2} \big|_{0}^{2} = (\frac{16}{4} + 4) - 0 = 8$
+:::
+
+::: {.callout-tip collapse="true"}
+$\\ \int_{2}^{-2} e^{2x}dx + \frac{1}{2}e^{2x} \big|_{-2}^{2} = (\frac{1}{2} \cdot e^{4}) - (\frac{1}{2}e^{-4}) = 27.29$
+:::
+
+::: {.callout-tip collapse="true"}
+$\\ \int_{2}^{0} (x +4)^{2}dx = \int_{2}^{0}(x^{2} + 8x + 16)dx = \frac{1}{3}x^{3} + 4x^{2} + 16x\big|_{0}^{2}$ <br> <br>
+$\\ (\frac{8}{3} + 16 + 32) - 0 = 50\frac{2}{3}$
+:::
+
+
+::: {.callout-tip collapse="true"}
+$\\ \int 4x dx = 4 \cdot \frac{1}{2} \cdot x^{2} + c = 2x^{2} + c$
+:::
+
+### Übungen 4 – A2
+
+::: {.callout-tip collapse="true"}
+$\\ f(x) = -2x$, Fläche im Intervall [-2,2] <br>
+	Nullstelle: x = 0 <br>
+	Stammfunktion: $\\ F(x) = -x^{2} + c$ 
+	<br><br>
+	Fläche 
+	$\\ int_{2}^{-2} -2x dx + \int_{2}{0} -2x dx = |F(0) - F(-2)| + |F(2) - F(0)| = |(0 - (-4))| + |(-4 + 0)|$ <br><br>
+	$\\ = 4 + 4 = 8$
+:::
+
+::: {.callout-tip collapse="true"}
+$\\ f(x) = \begin{cases} 0 & \text{für} x < 0 \\ -x^{2} + \frac{4}{3} & \text{für} \; 0 \leq x \leq 1 \;\;\; \text{im Intervall} \; [0,1] \\ 0 & \text{für} x > 1\end{cases}$<br><br>
+Stammfunktion: $\\(F(x) = -\frac{1}{3}x^{3} + \frac{4}{3}x + c$ <br><br>
+Fäche: $\\(F(1) - F(0) = -\frac{1}{3} + \frac{4}{3} - 0 = 1$
+:::
+
+### Übungen 4 – A3
+

@@ -1,0 +1,100 @@
+---
+title: Block 3
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Exercises
+
+### Übungen 3 – A1
+Bestimmen Sie die Ableitung zu
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+  answer = "f'(x) = $12x^{3} + 2x$",
+  "f(x) = $12x^{3} + x$",
+  "f'(x) = $3x^{3} + 2x$"
+)
+cat("(a) ${f}$ = 3 $x^{4}$ + $x^{2}$ + 5",
+  mcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+$\\f(x) =  3x^{4} + x^{2} + 5 \Rightarrow f'(x) = 12x^{3} = 2x$
+:::
+
+b
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = e^{3x} \Rightarrow f'(x) = 3e^{3x}$
+:::
+
+c
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = 2x + e^{3x} + x \Rightarrow f'(x) = 2 +3e^{3x} + 1 = 3e^{3x} + 3$
+:::
+
+d
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = \sqrt{1 - x^{2}} = (1 - x^{2})^{1/2} \Rightarrow f'(x) = 1/2 \cdot (1 - x^{2})^{- \frac{1}{2}} \cdot (-2x)$
+:::
+
+e 
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = e^{x} \cdot ln(x) \Rightarrow f'(x) = e^{x} \cdot \frac{1}{x} + e^{x} \cdot ln(x)$
+:::
+
+f
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = \frac{(x + 4)}{x^{2}} = (x + 4) \cdot \frac{1}{x^{2}} \Rightarrow f'(x) = (x + 4) \cdot (-2) \cdot \frac{1}{x^{3}} + 1 \cdot \frac{1}{x^{2}}$
+:::
+
+g
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = (x + 4) \cdot e^{x} \Rightarrow f'(x) = (x + 4) \cdot e^{x} + 1 \cdot e^{x}$
+:::
+
+h
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = ln(x - 4) + 2 \Rightarrow f'(x) = 1/(x - 4)$
+:::
+
+i 
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = e^{-2x} \Rightarrow f'(x) = -2e^{-2x}$
+:::
+
+j
+
+::: {.callout-tip collapse="true"}
+$\\f(x) = e^{-2x} \Rightarrow f'(x) = -4x \cdot e^{-2x^{2}}$
+:::
+
+### Übungen 3 – A2
+
+
+::: {.callout-tip collapse="true"}
+Zunächst muss die Ableitung gebildet werden.<br>
+Es ist $\\f'(x) = 24x^{2} + 2 6x -3$ <br>
+
+Davon müssen nun die Nullstellen bestimmt werden: <br><br>
+$\\0 = 24x^{2} + 6x - 3 \Leftrightarrow 0 = 8x^{2} + 2x -1$ <br><br>
+$\\ \Leftrightarrow x_{1,2} = \frac{-2 \pm \sqrt{4 - 4 \cdot 8 \cdot (-1)}}{16} = \frac{-2 \pm \sqrt{36}}{16} \Rightarrow x_{1} = - 0.5,x_{2} = 0.25$
+
+Eine Auswertung der Funktion an den möglichen Extremstellen, sowie am
+Rand des Intervalls ergibt: <br>
+$\\(f(-1) = -2, f(-0.5) = 1.25, f(0.25) = -0.4375, f(1) = 8$ <br><br>
+Daraus lässt sich ablesen, dass die absoluten Extremwerte am Rand
+liegen. Da ein Polynom vom Grad 3 entweder zwei Extremwerte oder eine
+Wendestelle besitzt, sind die inneren Punkte auch lokale Extremwerte.
+:::

@@ -1,0 +1,12 @@
+---
+title: Block 6
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Exercises
+
+### Übungen 6 – A1
+### Übungen 6 – A2
+### Übungen 6 – A3

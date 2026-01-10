@@ -1,0 +1,158 @@
+---
+title: Block 1
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+Block 1 is about doing X with Y.
+
+
+## Exercises
+
+### Übungen 1 – A1
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"",
+	"",
+	answer = ""
+)
+
+cat("(a) Welche Elemente gehören zur symmetrischen Differenz A $\\Delta$ B ?", longmcq(opts))
+```
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"",
+	"",
+	answer = ""
+)
+
+cat("(b) Die symmetrische Differenz lässt sich $\\sigma$ auch ausdrücken 
+	als A $\\Delta$ B = (A\\B) $\\cup$ (B\\A)", longmcq(opts))
+```
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo = FALSE}
+opts <- c(
+	"",
+	"",
+	answer = ""
+)
+
+cat("(c) A $\\cap$ B = B heißt dasselbe wie B $\\subset$ A", longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+
+:::
+
+### Übungen 1 – A2
+
+Bei einem Spiel mit Münzen wird eine Münze 4 Mal hintereinander geworfen. Dabei wird jedes Mal notiert, ob
+Wappen (W) oder Zahl (Z) gefallen ist.
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+library(webexercises)
+
+opts <- c(
+ answer = paste0(
+    "$\\Omega = \\{(x_1, x_2, x_3, x_4) \\mid x_i \\in \\{W, Z\\},$",
+    "<br>",
+    "$i = 1, \\ldots, 4\\}$",
+    "<br>",
+    "$= \\{(W,W,W,W), (W,W,W,Z), (W,W,Z,W), (W,W,Z,Z), \\ldots, (Z,Z,Z,Z)\\}$"
+  ),
+  "$\\Omega$ = {W, Z}"
+)
+
+cat("(a) Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
+    mcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
+die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
+
+$\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
+(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+library(webexercises)
+
+opts <- c(
+	answer = "16 Elemente",
+	"6 Elemente",
+	"8 Elemente"
+)
+
+cat("(b) Wie viel Elemente enthält die Menge $\\Omega$? Geben Sie eine geeignete Menge $\\Omega$ an, in der alle möglichen Ergebnisse liegen.",
+    longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+Die Anzahl der Elemente von $\Omega$ ist #$\Omega$ = 2·2·2·2 = 16, da es für jeden Wurf
+zwei mögliche Ergebnisse gibt.
+:::
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+opts <- c(
+ answer = "A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
+		W), (Z, Z, W, W)}",
+  "A = {(W, W, Z, Z), (W, Z, W, Z), (Z, W, W, Z), (Z, Z, W, W)}",
+	"$$x^4$$"
+)
+cat("c) Geben Sie für das Ereignis A: „es ist genau zweimal
+	Wappen gefallen“ die Ereignismenge an.",
+   longmcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+Die Menge der Ergebnisse, in denen genau zweimal Wappen gefallen ist, lässt
+sich durch A = {(W, W, Z, Z), (W, Z, W, Z), (W, Z, Z, W), (Z, W, W, Z), (Z, W, Z,
+W), (Z, Z, W, W)} beschreiben.
+:::
+
+
+::: {.webex-check .webex-box}
+```{r, results='asis', echo=FALSE}
+library(webexercises)
+
+opts <- c(
+	answer = paste0(
+	"B = \\{(W, W, \\x_3, \\x_{4}) | \\x_{3}, \\x_{4} \\in \\{W, Z\\}\\} = ",
+	"{(W, W, W, W), (W, W, W, Z), (W, W, Z, W), (W, W, Z, Z)}"
+	),
+	"$f'(x)$ = 3\\e^3x" 
+)
+
+cat("(d) Geben Sie für das Ereignis B: „in den ersten beiden Würfen ist Wappen gefallen“ die Ereignismenge an.",
+    mcq(opts))
+```
+:::
+
+::: {.callout-tip collapse="true"}
+Da die Münzen hintereinander geworfen werden, spielt die Reihenfolge in der
+die Ergebnisse Wappen oder Zahl auftreten eine Rolle.
+
+$\Omega$ = {($x_{1}$, $x_{2}$, $x_{3}$, $x_{4}$) | xi $\in$ {W, Z}, i = 1, …,4} = {(W, W, W, W), (W, W, W, Z),
+(W, W, Z, W), (W, W, Z, Z), (W, Z, W, W), …, (Z, Z, Z, Z)}
+:::
+
+### Übungen 1 – A3
+### Übungen 1 – A4
+### Übungen 1 – A5

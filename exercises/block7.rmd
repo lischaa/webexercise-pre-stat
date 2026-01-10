@@ -1,0 +1,12 @@
+---
+title: Block 7
+---
+```{r, echo = FALSE, results='asis'}
+library(webexercises)
+```
+
+## Exercises
+
+### Übungen 7 – A1
+### Übungen 7 – A2
+### Übungen 7 – A3

@@ -690,8 +690,6 @@ quiz(caption = "",
 	$$
 
 	Die Vektoren sind linear abhängig.
-
-
 <br>
 
 (b) Gesucht sind $\alpha, \beta$ und $\gamma$ mit \alpha \cdot x + \beta \cdot y + \gamma \cdot z = 0. Man erhält das folgende Gleichungssystem:
