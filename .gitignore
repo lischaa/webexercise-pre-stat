@@ -3,9 +3,10 @@
 .RData
 .Ruserdata
 tool/
-*.html
-*_files/
+
 *.png
 _site/
 /.quarto/
 **/*.quarto_ipynb
+out/
+.backup/

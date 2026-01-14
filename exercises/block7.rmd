@@ -10,3 +10,5 @@ library(webexercises)
 ### Übungen 7 – A1
 ### Übungen 7 – A2
 ### Übungen 7 – A3
+### Übungen 7 – A4
+### Übungen 7 – A5

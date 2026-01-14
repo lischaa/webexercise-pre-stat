@@ -9,4 +9,3 @@ library(webexercises)
 
 ### Übungen 8 – A1
 ### Übungen 8 – A2
-### Übungen 8 – A3

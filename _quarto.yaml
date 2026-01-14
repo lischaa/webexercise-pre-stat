@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: out
+  output-dir: docs
 
 # execute:
 #   freeze: auto # re-render only changed chapters
